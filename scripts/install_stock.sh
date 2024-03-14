@@ -59,7 +59,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 ROOT="$( cd $DIR && cd .. && pwd)"
 CNICONFIGS=$ROOT/configs/cni
 
-#DST=/etc/cni/net.d
+DST=/etc/cni/net.d
 sudo mkdir -p $DST
 
 for CONFIG in 10-bridge.conf
