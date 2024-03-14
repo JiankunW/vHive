@@ -47,7 +47,7 @@ containerd --version || echo "failed to build containerd"
 # Install k8s
 # Update Mar 14 2024: the change to the new Kubernetes images repo is not backward compatible
 # ref: https://forum.linuxfoundation.org/discussion/864693/the-repository-http-apt-kubernetes-io-kubernetes-xenial-release-does-not-have-a-release-file
-K8S_VERSION=1.28.1-1.1
+K8S_VERSION=1.23.5-00  #1.28.1-1.1
 sudo mkdir -p /etc/apt/keyrings/
 curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
