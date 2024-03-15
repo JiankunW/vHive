@@ -68,7 +68,7 @@ do
 done
 
 # Install knative CLI
-KNATIVE_VERSION="release-1.9"
+KNATIVE_VERSION="release-1.3"
 git clone --quiet --depth=1 --branch=$KNATIVE_VERSION -c advice.detachedHead=false https://github.com/knative/client.git $HOME/client
 cd $HOME/client
 hack/build.sh -f
